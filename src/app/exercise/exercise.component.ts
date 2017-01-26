@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import {ExerciseModel} from "../model/exercise.model";
 
 @Component({
   selector: 'wt-exercise',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExerciseComponent implements OnInit {
 
-  constructor() { }
+  @Input() exerciseModel : ExerciseModel;
+
+  constructor() {}
 
   ngOnInit() {
   }

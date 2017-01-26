@@ -1,0 +1,4 @@
+<p>
+  Repeat {{workoutModel.nbRepetitions}}
+  <wt-exercise *ngFor="let exercise of workoutModel.exercises" [exerciseModel]="exercise"></wt-exercise>
+</p>
