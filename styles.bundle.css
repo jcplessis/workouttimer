@@ -6,6 +6,10 @@ body {
   margin: 0;
   background-color: #fafafa;
 }
+
+html, body{
+  height: 100%;
+}
 /**
  * Applies styles for users in high contrast mode. Note that this only applies
  * to Microsoft browsers. Chrome can be included by checking for the `html[hc]`

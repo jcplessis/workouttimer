@@ -1166,7 +1166,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["a
  * @suppress {suspiciousCode,uselessCode,missingProperties}
  */
 /* tslint:disable */
-var styles = ['body[_ngcontent-%COMP%] {\n  background-color: #fafafa;\n}'];
+var styles = ['body[_ngcontent-%COMP%] {\n  background-color: #fafafa;\n}\n\n.app-action[_ngcontent-%COMP%] {\n  display: inline-block;\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n}\n\n.app-icon-button[_ngcontent-%COMP%] {\n  box-shadow: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  background: none;\n  border: none;\n  cursor: pointer;\n  -webkit-filter: none;\n          filter: none;\n  font-weight: normal;\n  height: auto;\n  line-height: inherit;\n  margin: 0;\n  min-width: 0;\n  padding: 0;\n  text-align: left;\n  text-decoration: none;\n}\n\n.app-toolbar-menu[_ngcontent-%COMP%] {\n  padding: 0 14px 0 14px;\n  color: white;\n}'];
 //# sourceMappingURL=/home/jcplessis/ang2/workouttimer/src/app.component.css.shim.ngstyle.js.map
 
 /***/ }),
