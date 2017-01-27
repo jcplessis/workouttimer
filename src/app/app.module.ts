@@ -7,6 +7,7 @@ import {AppComponent} from './app.component';
 import {ExerciseComponent} from './exercise/exercise.component';
 import {WorkoutComponent} from './workout/workout.component';
 import {MaterialModule} from '@angular/material';
+import 'hammerjs';
 
 @NgModule({
   declarations: [

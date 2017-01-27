@@ -1,4 +1,26 @@
-<h1>
-  {{title}}
-<wt-workout></wt-workout>
-</h1>
+<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+
+  <md-sidenav #sidenav class="app-sidenav">
+    Sidenav
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+
+    Workout timer
+  </md-toolbar>
+
+  <div class="app-content">
+    {{title}}
+    <wt-workout></wt-workout>
+
+  </div>
+
+</md-sidenav-layout>
+
+<span class="app-action" [class.m2app-dark]="isDarkTheme">
+  <button md-fab><md-icon>check circle</md-icon></button>
+</span>
+
