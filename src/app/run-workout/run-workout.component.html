@@ -11,3 +11,5 @@
   <h3><md-icon>replay</md-icon> {{nbRepetitions}} sets left</h3>
   <wt-run-exercise *ngFor="let exercise of exercises" [exerciseModel]="exercise"></wt-run-exercise>
 </div>
+
+{{ (end - begin) / 1000 | number }}

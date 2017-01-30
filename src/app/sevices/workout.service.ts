@@ -11,7 +11,7 @@ export class WorkoutService {
     return [{
       id : 1,
       name: "HIIT 1",
-      nbRepetitions: 3,
+      nbRepetitions: 2,
       exercises: [{
         name: 'Test exercise',
         duration: 10
@@ -27,11 +27,11 @@ export class WorkoutService {
         nbRepetitions: 3,
         exercises: [{
           name: 'Test exercise',
-          duration: 10
+          duration: 5
         },
           {
             name: 'Repos !',
-            duration: 10
+            duration: 5
           }]
       }
     ];
