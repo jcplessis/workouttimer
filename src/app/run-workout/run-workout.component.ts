@@ -1,4 +1,4 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, OnDestroy} from "@angular/core";
 import {WorkoutService} from "../sevices/workout.service";
 import {ActivatedRoute} from "@angular/router";
 import {Observable} from "rxjs/Observable";
@@ -13,7 +13,7 @@ import {Subscription} from "rxjs";
   templateUrl: './run-workout.component.html',
   styleUrls: ['./run-workout.component.css']
 })
-export class RunWorkoutComponent implements OnInit {
+export class RunWorkoutComponent implements OnInit, OnDestroy {
 
   exercises: RunningExerciseModel[] = [];
   nbRepetitions: number = 0;
@@ -38,8 +38,13 @@ export class RunWorkoutComponent implements OnInit {
     this.nbRepetitions = this.workoutModel.nbRepetitions;
   }
 
+  ngOnDestroy(){
+    if(this.sub) {
+      this.sub.unsubscribe();
+    }
+  }
+
   public start(){
-    console.log("STAAAAART");
     this.begin = Date.now();
     this.sub = Observable.interval(200).take(1000)
       .subscribe(step=> {
@@ -56,7 +61,6 @@ export class RunWorkoutComponent implements OnInit {
               this.end = Date.now();
               this.sub.unsubscribe();
               const tot = this.end - this.begin;
-              console.log(`total time : ${tot}` );
             }else {
               this.exercises.forEach(exercise => exercise.durationLeft = exercise.duration);
             }
