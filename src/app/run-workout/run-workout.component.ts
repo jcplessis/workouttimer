@@ -46,7 +46,7 @@ export class RunWorkoutComponent implements OnInit {
         console.log(step);
         let exercise = this.exercises[this.currentExercise];
         exercise.durationLeft -= 0.2;
-        if(exercise.durationLeft<=0){
+        if(exercise.durationLeft<=0.100){
           exercise.durationLeft = 0;
           this.currentExercise ++;
           if(this.currentExercise >= this.exercises.length){

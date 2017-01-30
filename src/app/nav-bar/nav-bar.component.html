@@ -1,6 +1,6 @@
 <md-list>
   <md-list-item><h1>Workouts</h1></md-list-item>
-  <md-list-item *ngFor="let workout of workouts" (click)="goToWorkout(workout.id)">
+  <md-list-item routerLinkActive="active" routerLink="workout/{{workout.id}}" *ngFor="let workout of workouts" (click)="propagateNavigation()">
     <h3 md-line>{{workout.name}}</h3>
     <p md-line>{{workout.exercises.length}} exercises </p>
     <p md-line>({{totalTime(workout)}} seconds) </p>

@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class NavBarComponent implements OnInit {
   private workouts: WorkoutModel[];
 
-  @Output() clicked: EventEmitter<any> = new EventEmitter();
+  @Output() navigating: EventEmitter<any> = new EventEmitter();
 
   constructor(private workoutService: WorkoutService,
               private router: Router) {
@@ -24,12 +24,11 @@ export class NavBarComponent implements OnInit {
   public totalTime(workout: WorkoutModel) {
     return workout.exercises.map(
       exercise => exercise.duration
-    ).reduce((a, b) => a + b);
+    ).reduce((a, b) => a + b) * workout.nbRepetitions;
   }
 
-  public goToWorkout(id: number) {
-    this.router.navigate(['workout', id]);
-    this.clicked.emit();
+  public propagateNavigation() {
+    this.navigating.emit();
   }
 
 }

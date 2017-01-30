@@ -31,7 +31,7 @@ import { RunExerciseComponent } from './run-exercise/run-exercise.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES, {useHash: true})
   ],
   providers: [
     WorkoutService

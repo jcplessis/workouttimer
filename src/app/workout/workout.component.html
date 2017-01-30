@@ -11,3 +11,7 @@
   <h3><md-icon>replay</md-icon> {{workoutModel.nbRepetitions}} sets</h3>
   <wt-exercise *ngFor="let exercise of workoutModel.exercises" [exerciseModel]="exercise"></wt-exercise>
 </div>
+
+<span class="app-action">
+  <button md-fab><md-icon>add circle</md-icon></button>
+</span>

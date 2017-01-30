@@ -1,3 +1,8 @@
 p {
   color: darkgrey;
 }
+
+.active{
+  font-weight: bold;
+  background-color: lightgray;
+}
