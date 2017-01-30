@@ -12,6 +12,7 @@ export class WorkoutComponent implements OnInit {
 
   constructor() {
     this.workoutModel = {
+      name: "Workout test",
       nbRepetitions: 3,
       exercises: [{
         name: 'Test exercise',

@@ -8,20 +8,28 @@ import {ExerciseComponent} from './exercise/exercise.component';
 import {WorkoutComponent} from './workout/workout.component';
 import {MaterialModule} from '@angular/material';
 import 'hammerjs';
+import {WorkoutService} from "./sevices/workout.service";
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import {RouterModule} from "@angular/router";
+import {ROUTES} from "./app.routes";
 
 @NgModule({
   declarations: [
     AppComponent,
     ExerciseComponent,
-    WorkoutComponent
+    WorkoutComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [
+    WorkoutService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

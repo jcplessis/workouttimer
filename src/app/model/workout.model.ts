@@ -1,5 +1,7 @@
 import {ExerciseModel} from "./exercise.model";
-export interface WorkoutModel{
-  exercises : ExerciseModel[],
-  nbRepetitions : number
+export interface WorkoutModel {
+  id: number;
+  name: string;
+  exercises: ExerciseModel[];
+  nbRepetitions: number;
 }

@@ -1,7 +1,7 @@
-<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+<md-sidenav-layout fullscreen>
 
   <md-sidenav #sidenav class="app-sidenav">
-    Sidenav
+    <wt-nav-bar (clicked)="sidenav.close()"></wt-nav-bar>
   </md-sidenav>
 
   <md-toolbar color="primary">
@@ -9,18 +9,17 @@
       <i class="material-icons app-toolbar-menu">menu</i>
     </button>
 
-    Workout timer
+
+  Workout timer
   </md-toolbar>
 
   <div class="app-content">
-    {{title}}
-    <wt-workout></wt-workout>
-
+    <router-outlet></router-outlet>
   </div>
 
 </md-sidenav-layout>
 
-<span class="app-action" [class.m2app-dark]="isDarkTheme">
+<span class="app-action">
   <button md-fab><md-icon>check circle</md-icon></button>
 </span>
 
