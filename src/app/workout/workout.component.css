@@ -1,0 +1,21 @@
+.large {
+  font-size: 4em;
+}
+
+h2 {
+  display: inline;
+}
+
+.right {
+  float: right;
+  padding-right: 2em;
+}
+
+.card-container {
+  padding-top: 1em;
+}
+
+.card-container md-icon {
+  position: relative;
+  top: 0.12em;
+}

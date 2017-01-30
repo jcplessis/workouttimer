@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {WorkoutModel} from "../model/workout.model";
+import {ActivatedRoute} from "@angular/router";
+import {WorkoutService} from "../sevices/workout.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'wt-workout',
@@ -9,24 +12,16 @@ import {WorkoutModel} from "../model/workout.model";
 export class WorkoutComponent implements OnInit {
 
   workoutModel: WorkoutModel;
+  private sub: Subscription;
 
-  constructor() {
-    this.workoutModel = {
-      name: "Workout test",
-      nbRepetitions: 3,
-      exercises: [{
-        name: 'Test exercise',
-        duration: 10
-      },
-        {
-          name: 'Repos !',
-          duration: 10
-        }]
-    }
-
+  constructor(private route: ActivatedRoute, private workoutService: WorkoutService) {
   }
 
   ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+      const workoutId = parseInt(this.route.snapshot.params["workoutId"]);
+      this.workoutModel = this.workoutService.get(workoutId);
+    });
   }
 
 }

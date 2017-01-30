@@ -38,4 +38,7 @@ export class WorkoutService {
   }
 
 
+  get(workoutId: number): WorkoutModel {
+    return this.list().filter(workout => workout.id === workoutId)[0];
+  }
 }

@@ -12,13 +12,17 @@ import {WorkoutService} from "./sevices/workout.service";
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {RouterModule} from "@angular/router";
 import {ROUTES} from "./app.routes";
+import { HomeComponent } from './home/home.component';
+import { RunWorkoutComponent } from './run-workout/run-workout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExerciseComponent,
     WorkoutComponent,
-    NavBarComponent
+    NavBarComponent,
+    HomeComponent,
+    RunWorkoutComponent
   ],
   imports: [
     BrowserModule,

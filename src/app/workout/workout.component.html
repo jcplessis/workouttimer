@@ -1,4 +1,13 @@
-<button md-raised-button color="primary">Repeat {{workoutModel.nbRepetitions}}</button>
+<div>
+  <span>
+    <h2>{{workoutModel.name}}</h2>
+  </span>
+  <span class="right">
+    <button class="app-icon-button"><md-icon class="large" routerLink="run">play_circle_outline</md-icon></button>
+  </span>
+</div>
+
 <div class="card-container">
+  <h3><md-icon>replay</md-icon> {{workoutModel.nbRepetitions}} sets</h3>
   <wt-exercise *ngFor="let exercise of workoutModel.exercises" [exerciseModel]="exercise"></wt-exercise>
 </div>
