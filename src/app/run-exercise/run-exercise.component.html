@@ -1,0 +1,4 @@
+<md-card>
+  <md-progress-circle mode="determinate" value="{{ progress(exerciseModel) }}" class="circle"></md-progress-circle><span>{{exerciseModel.name}}</span>
+  <span class="right">{{exerciseModel.durationLeft | number}}/{{exerciseModel.duration | number}} sec</span>
+</md-card>

@@ -12,13 +12,12 @@ import {Subscription} from "rxjs";
 export class WorkoutComponent implements OnInit {
 
   workoutModel: WorkoutModel;
-  private sub: Subscription;
 
   constructor(private route: ActivatedRoute, private workoutService: WorkoutService) {
   }
 
   ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
+    this.route.params.subscribe(params => {
       const workoutId = parseInt(this.route.snapshot.params["workoutId"]);
       this.workoutModel = this.workoutService.get(workoutId);
     });

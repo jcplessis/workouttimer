@@ -14,6 +14,7 @@ import {RouterModule} from "@angular/router";
 import {ROUTES} from "./app.routes";
 import { HomeComponent } from './home/home.component';
 import { RunWorkoutComponent } from './run-workout/run-workout.component';
+import { RunExerciseComponent } from './run-exercise/run-exercise.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RunWorkoutComponent } from './run-workout/run-workout.component';
     WorkoutComponent,
     NavBarComponent,
     HomeComponent,
-    RunWorkoutComponent
+    RunWorkoutComponent,
+    RunExerciseComponent
   ],
   imports: [
     BrowserModule,

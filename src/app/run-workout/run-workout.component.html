@@ -1,3 +1,13 @@
-<p>
-  run-workout works!
-</p>
+<div>
+  <span>
+    <h2>{{workoutModel.name}}</h2>
+  </span>
+  <span class="right">
+    <button class="app-icon-button"><md-icon class="large" (click)="start()">play_circle_outline</md-icon></button>
+  </span>
+</div>
+
+<div class="card-container">
+  <h3><md-icon>replay</md-icon> {{nbRepetitions}} sets left</h3>
+  <wt-run-exercise *ngFor="let exercise of exercises" [exerciseModel]="exercise"></wt-run-exercise>
+</div>

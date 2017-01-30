@@ -7,7 +7,6 @@ export const ROUTES:Routes = [
   { path: '', component: HomeComponent },
   { path: 'workout',
     children: [
-      //{ path: '', component: WorkoutComponent },
       { path: ':workoutId', component: WorkoutComponent },
       { path: ':workoutId/run', component: RunWorkoutComponent },
     ]
