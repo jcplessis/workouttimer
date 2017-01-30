@@ -85,9 +85,13 @@ var RunWorkoutComponent = (function () {
         });
         this.nbRepetitions = this.workoutModel.nbRepetitions;
     };
+    RunWorkoutComponent.prototype.ngOnDestroy = function () {
+        if (this.sub) {
+            this.sub.unsubscribe();
+        }
+    };
     RunWorkoutComponent.prototype.start = function () {
         var _this = this;
-        console.log("STAAAAART");
         this.begin = Date.now();
         this.sub = __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].interval(200).take(1000)
             .subscribe(function (step) {
@@ -104,7 +108,6 @@ var RunWorkoutComponent = (function () {
                         _this.end = Date.now();
                         _this.sub.unsubscribe();
                         var tot = _this.end - _this.begin;
-                        console.log("total time : " + tot);
                     }
                     else {
                         _this.exercises.forEach(function (exercise) { return exercise.durationLeft = exercise.duration; });
@@ -4661,6 +4664,7 @@ var Wrapper_RunWorkoutComponent = (function () {
     Wrapper_RunWorkoutComponent.prototype.ngOnDetach = function (view, componentView, el) {
     };
     Wrapper_RunWorkoutComponent.prototype.ngOnDestroy = function () {
+        this.context.ngOnDestroy();
     };
     Wrapper_RunWorkoutComponent.prototype.ngDoCheck = function (view, el, throwOnChange) {
         var changed = this._changed;
@@ -4709,6 +4713,7 @@ var View_RunWorkoutComponent_Host0 = (function (_super) {
     };
     View_RunWorkoutComponent_Host0.prototype.destroyInternal = function () {
         this.compView_0.destroy();
+        this._RunWorkoutComponent_0_3.ngOnDestroy();
     };
     View_RunWorkoutComponent_Host0.prototype.visitRootNodesInternal = function (cb, ctx) {
         cb(this._el_0, ctx);
