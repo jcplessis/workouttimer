@@ -2,6 +2,7 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {WorkoutService} from "../services/workout.service";
 import {WorkoutModel} from "../model/workout.model";
 import {Router} from "@angular/router";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'wt-nav-bar',
@@ -14,7 +15,7 @@ export class NavBarComponent implements OnInit {
   @Output() navigating: EventEmitter<any> = new EventEmitter();
 
   constructor(private workoutService: WorkoutService,
-              private router: Router) {
+              private auth: AuthService) {
   }
 
   ngOnInit() {

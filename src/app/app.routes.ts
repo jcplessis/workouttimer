@@ -13,5 +13,4 @@ export const ROUTES:Routes = [
     ]
   },
   { path: '**', redirectTo: '' }
-  // {path: 'access_token', component: HomeComponent}
 ];

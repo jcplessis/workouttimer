@@ -1,4 +1,4 @@
-<md-list>
+<md-list *ngIf="auth.authenticated()">
   <md-list-item><h1>Workouts</h1></md-list-item>
   <md-list-item routerLinkActive="active" routerLink="workout/{{workout.id}}" *ngFor="let workout of workouts" (click)="propagateNavigation()">
     <h3 md-line>{{workout.name}}</h3>
