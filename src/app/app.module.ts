@@ -8,13 +8,16 @@ import {ExerciseComponent} from './exercise/exercise.component';
 import {WorkoutComponent} from './workout/workout.component';
 import {MaterialModule} from '@angular/material';
 import 'hammerjs';
-import {WorkoutService} from "./sevices/workout.service";
+import {WorkoutService} from "./services/workout.service";
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {RouterModule} from "@angular/router";
 import {ROUTES} from "./app.routes";
 import { HomeComponent } from './home/home.component';
 import { RunWorkoutComponent } from './run-workout/run-workout.component';
 import { RunExerciseComponent } from './run-exercise/run-exercise.component';
+import {AuthService} from "./services/auth.service";
+import {AuthenticationCallbackActivateGuard} from "./guard/authentication.guard";
+// import { AUTH_PROVIDERS }      from 'angular2-jwt';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { RunExerciseComponent } from './run-exercise/run-exercise.component';
     RouterModule.forRoot(ROUTES, {useHash: true})
   ],
   providers: [
-    WorkoutService
+    WorkoutService,
+    AuthService,
+    AuthenticationCallbackActivateGuard
   ],
   bootstrap: [AppComponent]
 })

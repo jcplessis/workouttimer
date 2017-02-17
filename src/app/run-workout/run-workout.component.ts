@@ -1,5 +1,5 @@
 import {Component, OnInit, OnDestroy} from "@angular/core";
-import {WorkoutService} from "../sevices/workout.service";
+import {WorkoutService} from "../services/workout.service";
 import {ActivatedRoute} from "@angular/router";
 import {Observable} from "rxjs/Observable";
 import "rxjs/add/observable/interval";

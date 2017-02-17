@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {WorkoutModel} from "../model/workout.model";
 import {ActivatedRoute} from "@angular/router";
-import {WorkoutService} from "../sevices/workout.service";
+import {WorkoutService} from "../services/workout.service";
 import {Subscription} from "rxjs";
 
 @Component({
